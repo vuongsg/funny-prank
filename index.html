@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Vuong Nguyen">
+        <title>Funny prank</title>
+        <link href="style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main id="main">
+            <section id="divQuestion">
+                <h1>Hey babe, do you love me?</h1>
+            </section>
+            <section id="divNo1">
+                <button id="btnNo">NO</button>
+            </section>
+            <section id="divYes">
+                <button id="btnYes">YES</button>
+            </section>
+            <section id="divNo2"></section>
+        </main>
+
+        <script>
+            let isNoInFirst;
+            const btnNo = document.querySelector("#btnNo");
+            const divNo1 = document.querySelector("#divNo1");
+            const divNo2 = document.querySelector("#divNo2");
+
+            window.addEventListener('load', () => {
+                isNoInFirst = divNo1.contains(btnNo);
+            });
+
+            btnNo.addEventListener('mouseover', evt => {
+                if (isNoInFirst) {
+                    divNo2.appendChild(btnNo);
+                } else {
+                    divNo1.appendChild(btnNo);
+                }
+                isNoInFirst=!isNoInFirst;
+            });
+
+            btnYes.addEventListener('click', () => {
+                alert("Thank you babe! I love you too ^__^")
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e9ebee;
+    font-size: 16px;
+}
+
+#main {
+    background-color: #fff;
+    margin: 20px 40px;
+    min-height: 900px;
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 3fr) 1fr;
+    grid-template-rows: 150px 300px;
+    grid-auto-rows: 300px;
+    grid-template-areas: "question question question question question"
+                        ". no1 yes no2 .";
+}
+
+@media screen and (max-width: 900px) {
+    #main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(180px, max-content);
+        grid-auto-rows: minmax(180px, max-content);
+        grid-template-areas: "question"
+                            "no1"
+                            "yes"
+                            "no2";
+    }
+}
+
+#divQuestion {
+    grid-area: question;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 3px;
+    padding: 10px;
+    color: rgb(54, 44, 201);
+}
+
+#divQuestion h1 {
+    font-size: 2rem;
+}
+
+#divNo1 {
+    grid-area: no1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#divYes {
+    grid-area: yes;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#divNo2 {
+    grid-area: no2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    font-size: 1.2rem;
+    min-width: 60px;
+    min-height: 40px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #2e3033;
+    color: #fff;
+}
