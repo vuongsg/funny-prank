@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --footer-bg: #2e3033;
+}
+
 body {
     background-color: #e9ebee;
     font-size: 16px;
@@ -12,13 +16,15 @@ body {
 #main {
     background-color: #fff;
     margin: 20px 40px;
-    min-height: 900px;
+    min-height: 700px;
     display: grid;
     grid-template-columns: 1fr repeat(3, 3fr) 1fr;
-    grid-template-rows: 150px 300px;
-    grid-auto-rows: 300px;
+    grid-template-rows: 150px;
+    grid-auto-rows: 200px;
     grid-template-areas: "question question question question question"
-                        ". no1 yes no2 .";
+                        ". . no3 . ."
+                        ". no1 yes no2 ."
+                        ". . no4 . .";
 }
 
 @media screen and (max-width: 900px) {
@@ -31,6 +37,10 @@ body {
                             "no1"
                             "yes"
                             "no2";
+    }
+
+    #divNo3, #divNo4 {
+        visibility: collapse;
     }
 }
 
@@ -48,22 +58,40 @@ body {
     font-size: 2rem;
 }
 
-#divNo1 {
-    grid-area: no1;
+.divBtn {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#divNo1 {
+    grid-area: no1;
 }
 
 #divYes {
     grid-area: yes;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #divNo2 {
     grid-area: no2;
+}
+
+#divNo3 {
+    grid-area: no3;
+}
+
+#divNo4 {
+    grid-area: no4;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,6 +103,6 @@ button {
     min-height: 40px;
     padding: 10px;
     cursor: pointer;
-    background-color: #2e3033;
+    background-color: var(--footer-bg);
     color: #fff;
 }
