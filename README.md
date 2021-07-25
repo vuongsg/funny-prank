@@ -1,13 +1,13 @@
 # A funny prank
-Just a simple question, you have two options (Yes/No). Try to answer each of them ^^
+There has a simple question and two direct anwsers. All remaining things are up to you :))
 
 ## How to use
-Run index.html and play with it.
+Simply, run index.html and play with it.
 
 ## Technologies
 - HTML
 - CSS
-- Vanilla Javascript
+- Vanilla JavaScript
 
 ## Browsers support
 - Edge 16+
