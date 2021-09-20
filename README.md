@@ -1,8 +1,8 @@
 # A funny prank
 There has a simple question and two direct anwsers. All remaining things are up to you :))
 
-## How to use
-Simply, run index.html and play with it.
+## Website
+Access <a href="https://vuongsg.github.io/funny-prank/" target="_blank">https://vuongsg.github.io/funny-prank/</a> for playing with it.
 
 ## Technologies
 - HTML
